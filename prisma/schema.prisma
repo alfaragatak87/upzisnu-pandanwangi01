@@ -1,0 +1,137 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model AdminUser {
+  id           String   @id @default(uuid())
+  username     String   @unique
+  passwordHash String
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model SiteSetting {
+  id                    String   @id @default(uuid())
+  brandNameDisplay      String
+  legalName             String
+  foundedYear           Int
+  address               String
+  whatsappNumber        String
+  whatsappWaMe          String
+  email                 String
+  serviceHours          String
+  socialTikTok          String
+  socialFacebook        String
+  socialInstagram       String?
+  instagramEnabled      Boolean  @default(false)
+  donationBankName      String
+  donationAccountNumber String
+  donationAccountHolder String
+  homeHeadline          String
+  homeSubheadline       String
+  ctaText               String
+  mapsEmbedIframe       String
+  legalDocPdfPath       String?
+  createdAt             DateTime @default(now())
+  updatedAt             DateTime @updatedAt
+}
+
+model Program {
+  id          String   @id @default(uuid())
+  title       String
+  slug        String   @unique
+  category    String
+  description String
+  imagePath   String?
+  isActive    Boolean  @default(true)
+  sortOrder   Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model News {
+  id              String   @id @default(uuid())
+  title           String
+  slug            String   @unique
+  coverImagePath  String?
+  publishedAt     DateTime?
+  contentMarkdown String
+  isPublished     Boolean  @default(false)
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}
+
+model GalleryAlbum {
+  id          String        @id @default(uuid())
+  title       String
+  description String?
+  photos      GalleryPhoto[]
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+}
+
+model GalleryPhoto {
+  id        String       @id @default(uuid())
+  albumId   String
+  album     GalleryAlbum @relation(fields: [albumId], references: [id], onDelete: Cascade)
+  imagePath String
+  caption   String
+  takenAt   DateTime     @default(now())
+  sortOrder Int          @default(0)
+  isVisible Boolean      @default(true)
+  createdAt DateTime     @default(now())
+}
+
+model MonthlyReport {
+  id             String   @id @default(uuid())
+  month          Int
+  year           Int
+  incomePdfPath  String?
+  expensePdfPath String?
+  notes          String?
+  createdAt      DateTime @default(now())
+
+  @@unique([month, year])
+}
+
+model OrganizationMember {
+  id            String   @id @default(uuid())
+  positionTitle String
+  name          String
+  photoPath     String?
+  whatsapp      String?
+  parentId      String?
+  parent        OrganizationMember?  @relation("OrgTree", fields: [parentId], references: [id], onDelete: SetNull)
+  children      OrganizationMember[] @relation("OrgTree")
+  sortOrder     Int      @default(0)
+  isActive      Boolean  @default(true)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+
+model GkoinDusun {
+  id       String @id @default(uuid())
+  name     String @unique
+  deposits GkoinDeposit[]
+}
+
+model GkoinDeposit {
+  id        String @id @default(uuid())
+  dusunId   String
+  dusun     GkoinDusun @relation(fields: [dusunId], references: [id], onDelete: Cascade)
+  month     Int
+  year      Int
+  amount    Int
+  inputDate DateTime @default(now())
+  note      String?
+  /// Nama penyetor setoran bulanan (opsional)
+  depositorName String?
+  createdAt DateTime @default(now())
+
+  @@unique([dusunId, month, year])
+}

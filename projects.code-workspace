@@ -1,0 +1,9 @@
+{
+	"folders": [
+		{
+			"uri": "vscode-remote://wsl+ubuntu-22.04/mnt/c/projects"
+		}
+	],
+	"remoteAuthority": "wsl+Ubuntu-22.04",
+	"settings": {}
+}

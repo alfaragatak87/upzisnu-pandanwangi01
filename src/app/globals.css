@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body { height: 100%; }
+/*
+ * Global body styling
+ * Use a light gray background for a cleaner look, and set a modern sans-serif fallback stack.
+ */
+body {
+  @apply bg-slate-50 text-slate-900;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+}
+/*
+ * Container helper used throughout pages. Increase the max width slightly
+ * for a more spacious feel and keep consistent horizontal padding.
+ */
+.container-page {
+  @apply mx-auto w-full max-w-7xl px-4;
+}
+
+@keyframes upzisnu-load {
+  0% {
+    transform: translateX(-110%);
+  }
+  50% {
+    transform: translateX(95%);
+  }
+  100% {
+    transform: translateX(320%);
+  }
+}
+
+@keyframes upzisnu-card-in {
+  0% {
+    opacity: 0;
+    transform: translateY(18px) scale(0.99);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}

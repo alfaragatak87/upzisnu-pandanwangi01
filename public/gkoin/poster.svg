@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1366" height="768" viewBox="0 0 1366 768" role="img" aria-labelledby="title desc">
+  <title id="title">Poster G-KOIN NU Peduli</title>
+  <desc id="desc">Poster edukasi gerakan sedekah G-KOIN NU Peduli.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#f3f4f6" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1366" height="768" fill="url(#bg)" />
+
+  <rect x="0" y="0" width="1366" height="86" fill="#0f6e3a" />
+  <rect x="0" y="86" width="1366" height="58" fill="#12a34a" />
+  <text x="683" y="56" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#071f12">
+    Apapun Aktivitas Anda Mulailah Dengan Sedekah
+  </text>
+  <text x="683" y="126" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#04180d">
+    Dengan Sedekah Hidup Menjadi Lebih Berkah
+  </text>
+
+  <text x="683" y="290" text-anchor="middle" font-family="Impact, Arial Black, sans-serif" font-size="126" fill="#d40f1f" stroke="#111827" stroke-width="5">
+    G-KOIN
+  </text>
+  <text x="683" y="372" text-anchor="middle" font-family="Georgia, serif" font-size="78" font-weight="700" fill="#111827">
+    NU Peduli
+  </text>
+
+  <image href="/brand/logo-lazisnu.png" x="545" y="405" width="280" height="280" preserveAspectRatio="xMidYMid meet" />
+
+  <text x="683" y="705" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="52" fill="#111827" font-weight="800">
+    PROGRAM PENDIDIKAN • PROGRAM KESEHATAN • PROGRAM EKONOMI • SOSIAL KEAGAMAAN
+  </text>
+  <rect x="0" y="722" width="1366" height="46" fill="#f5c300" />
+
+  <rect x="58" y="176" width="282" height="214" rx="14" fill="#e8f7ec" stroke="#84cc16" stroke-width="3" />
+  <text x="199" y="226" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" font-weight="800" fill="#0f6e3a">GERAKAN</text>
+  <text x="199" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="44" font-weight="900" fill="#14532d">NU BERZAKAT</text>
+  <text x="199" y="322" text-anchor="middle" font-family="Arial, sans-serif" font-size="48" font-weight="900" fill="#166534">UMAT</text>
+
+  <rect x="930" y="170" width="372" height="180" rx="16" fill="#ecfdf3" stroke="#86efac" stroke-width="3" />
+  <text x="1116" y="236" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#14532d">Setor Harian Kaleng</text>
+  <text x="1116" y="286" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#166534">Nomor Seri Tercatat</text>
+
+  <text x="910" y="470" font-family="Arial, sans-serif" font-size="40" font-weight="700" fill="#111827">MWCNU / Ranting NU :</text>
+  <line x1="1138" y1="462" x2="1332" y2="462" stroke="#111827" stroke-width="6" />
+
+  <text x="910" y="538" font-family="Arial, sans-serif" font-size="40" font-weight="700" fill="#111827">NAMA</text>
+  <line x1="1138" y1="530" x2="1332" y2="530" stroke="#111827" stroke-width="6" />
+
+  <text x="910" y="606" font-family="Arial, sans-serif" font-size="40" font-weight="700" fill="#111827">Nomor Seri</text>
+  <line x1="1138" y1="598" x2="1332" y2="598" stroke="#111827" stroke-width="6" />
+</svg>
