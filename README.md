@@ -54,3 +54,38 @@ Pada MVP offline, upload disimpan ke:
 - `public/uploads/...`
 
 Saat online nanti, kita bisa pindahkan storage ke S3/Cloudinary/Supabase Storage tanpa rombak besar (tinggal ganti adapter di `src/lib/upload.ts`).
+
+## 7) Cara Buka Website (Cepat, kalau lupa)
+1. Buka terminal di folder project:
+```bash
+cd /mnt/c/projects/upzisnu-pandanwangi01
+```
+
+2. Jalankan website:
+```bash
+npm run dev
+```
+
+3. Buka di browser:
+- Website publik: `http://localhost:3000`
+- Login admin: `http://localhost:3000/admin/login`
+
+4. Login admin pakai akun awal:
+- Username: `alfatih`
+- Password: `050105`
+
+5. Untuk menghentikan server:
+- Tekan `Ctrl + C` di terminal.
+
+### Catatan jika tidak bisa dibuka
+- Jika port `3000` sedang dipakai, jalankan:
+```bash
+npm run dev -- -p 3001
+```
+Lalu buka `http://localhost:3001`.
+
+- Jika baru pertama kali jalan atau ada error package, jalankan:
+```bash
+npm install
+npx prisma generate
+```
